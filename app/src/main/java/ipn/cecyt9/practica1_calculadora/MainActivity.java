@@ -20,7 +20,6 @@ public class MainActivity extends AppCompatActivity {
     }
 
     Double numero1,numero2,resultado;
-
     String operador;
 
     public void onClicknumero1(View miView){
@@ -136,6 +135,39 @@ public class MainActivity extends AppCompatActivity {
             Toast.makeText(this,"Numero Incorrecto",Toast.LENGTH_SHORT).show();
         }
 
+    }
+
+    public void Sen(View miView){
+        TextView tv=(TextView)findViewById(R.id.textView2);
+        try{
+            numero1 = Double.parseDouble(tv.getText().toString());
+            double rd= Math.toRadians(numero1);
+            resultado= Math.sin(rd);
+            tv.setText(String.valueOf(resultado));
+
+        }catch (NumberFormatException nfe){}
+    }
+
+    public void Cos(View miView){
+        TextView tv=(TextView)findViewById(R.id.textView2);
+        try{
+            numero1 = Double.parseDouble(tv.getText().toString());
+            double rd= Math.toRadians(numero1);
+            resultado= Math.cos(rd);
+            tv.setText(String.valueOf(resultado));
+
+        }catch (NumberFormatException nfe){}
+    }
+
+    public void Tan(View miView){
+        TextView tv=(TextView)findViewById(R.id.textView2);
+        try{
+            numero1 = Double.parseDouble(tv.getText().toString());
+            double rd= Math.toRadians(numero1);
+            resultado= Math.tan(rd);
+            tv.setText(String.valueOf(resultado));
+
+        }catch (NumberFormatException nfe){}
     }
 
     public void onClickLimpia(View miView)
